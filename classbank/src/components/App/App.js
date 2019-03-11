@@ -17,11 +17,15 @@ class App extends Component {
         <Navbar />
         <main>
           <Switch>
-            {/* <Route path='/signup */}
-            
+          <Route path="/signup" render={() => <SignUpForm />} />
+          <Route path="/login" render={() => <LogInForm />} />
+          <Route path="/logout" render={() => <Logout />} />
+
+          {/* <Route path='/login'render={(props) => {return (<SignUpForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />)}}/>
+          <Route path='/logout'render={(props) => {return (<SignUpForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />)}}/>
+          <Route path='/signup'render={(props) => {return (<SignUpForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />)}}/> */}
+
           </Switch>
-          {/* <Route path="" render={}/>
-          <Route path="" component={}/> */}
           </main>
       </div>
     );
