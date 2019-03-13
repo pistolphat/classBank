@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./App.css";
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import Navbar from "../../components/NavBar/NavBar";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";

@@ -11,7 +11,7 @@ class Home extends Component {
     super();
 
     this.state = {
-      lessons: []
+      // lessons: []
     };
   }
 
@@ -39,7 +39,9 @@ class Home extends Component {
     });
 
     // console.log(this.state.lessons);
-    return <div>{lessons}</div>;
+    return <div>
+    <input type='text' name='search' placeholder='Search your lesson'></input>
+    {lessons}</div>;
   }
 }
 

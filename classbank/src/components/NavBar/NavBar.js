@@ -13,8 +13,10 @@ class NavBar extends Component {
     }
     return (
       <div className='navbar'>
-      <div>Classbank</div>
-        <div>{navBarItems}</div>
+        <div>
+        <Link to='/'>Classbank</Link>
+        {navBarItems}
+        </div>
       </div>
     );
   } 
