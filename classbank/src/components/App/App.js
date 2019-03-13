@@ -17,7 +17,6 @@ class App extends Component {
     super(props);
 
     this.state = {
-      // lesson: [],
       email: "",
       password: "",
       isLoggedIn: false

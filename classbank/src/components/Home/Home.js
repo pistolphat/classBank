@@ -11,8 +11,38 @@ class Home extends Component {
     super();
 
     this.state = {
-      // lessons: []
-    };
+      lessons: [],
+      search: '',
+    }
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(e){
+    this.setState({search: e.target.value}, () => {
+      if (this.state.search == '') {
+        this.setState({search: ' '})
+      } else {
+        this.setState({search: this.state.search})
+      }
+    })
+    // let { value } = e.target
+    // let { lessons } = this.state
+
+    // lessons.forEach((lesson, index) => {
+
+    // let eachLesson = lesson.title.toLowerCase()
+
+    // if(eachLesson.includes(value)) {
+    //   this.setState((currentState) => {
+    //     currentState.lessons[index].title = true
+    //   })
+    // } else {
+    //   this.setState((currentState) => {
+    //     currentState.lessons[index].title = false
+    //   })
+    // }
+    // })
+    // this.setState ({ search: value})
   }
 
   componentDidMount() {
@@ -40,7 +70,10 @@ class Home extends Component {
 
     // console.log(this.state.lessons);
     return <div>
-    <input type='text' name='search' placeholder='Search your lesson'></input>
+      <h1>Classbank</h1>
+    {/* <input type='text' name='search' value = {this.state.search} onChange={this.handleChange} placeholder='Search your lesson'></input> */}
+    <input type='text' name={this.state.search} onChange={this.handleChange} placeholder='Search your lessons.'></input>
+
     {lessons}</div>;
   }
 }
