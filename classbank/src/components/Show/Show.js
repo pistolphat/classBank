@@ -23,7 +23,7 @@ componentDidMount() {
   })
 }
   render() {
-    console.log(this.state.lesson);
+    // console.log(this.state.lesson);
     return <div>
       <h1>{this.state.lesson.title}</h1>
       <h3>{this.state.lesson.date}</h3>
