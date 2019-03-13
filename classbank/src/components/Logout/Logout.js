@@ -1,7 +1,14 @@
 import React, { Component } from "react";
+import { Redirect } from 'react-router-dom'
 import "./Logout.css";
 
+
 class LogOut extends Component {
+
+  redirect(){
+    return < Redirect to='/signin'/>
+  }
+
   render() {
     return (
       <div>
@@ -12,7 +19,9 @@ class LogOut extends Component {
             type="submit"
             onClick={this.props.handleLogOut}
           />
+          {/* {this.redirect()} */}
         </form>
+        
       </div>
     );
   }

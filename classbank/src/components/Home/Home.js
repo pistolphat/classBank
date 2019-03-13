@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import "./Home.css";
 
-const url = "https://classbank.herokuapp.com/lesson";
+const url = "https://classbank.herokuapp.com/lesson/";
 
 class Home extends Component {
   constructor() {
@@ -30,15 +30,15 @@ class Home extends Component {
     let lessons = this.state.lessons.map(lesson => {
       return (
         <div className="lesson-container" key={lesson._id}>
-          <Link to={lesson._id} />
-          <h1>{lesson.title}</h1>
-          <h3>{lesson.date}</h3>
-          <h3>{lesson.instructor}</h3>
+          <Link to={`/lesson/${lesson._id}`}>
+            <h1>{lesson.title}</h1></Link>
+            <h3>Date: {lesson.date}</h3>
+            <h3>Instructor: {lesson.instructor}</h3>
         </div>
       );
     });
 
-    console.log(this.state.lessons);
+    // console.log(this.state.lessons);
     return <div>{lessons}</div>;
   }
 }

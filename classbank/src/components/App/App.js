@@ -8,6 +8,7 @@ import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import LogInForm from "../../components/LogInForm/LoginForm";
 import Logout from "../../components/Logout/Logout";
 import Home from "../../components/Home/Home"
+import Show from '../../components/Show/Show'
 
 const url = 'https://classbank.herokuapp.com'
 
@@ -16,7 +17,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      lesson: [],
+      // lesson: [],
       email: "",
       password: "",
       isLoggedIn: false
@@ -86,15 +87,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <header>
         <Navbar isLoggedIn={this.state.isLoggedIn}/>
+      </header>
+      
         <main>
           <Switch>
-          
             <Route path='/signup'render={(props) => {return (<SignUpForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />)}}/>
             <Route path='/login'render={(props) => {return (<LogInForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} />)}}/>
             <Route path='/logout'render={(props) => {return (<Logout isLoggedIn={this.state.isLoggedIn} handleLogOut={this.handleLogOut} />)}}/>
-
-            <Route path="/" render={() => {return(<Home isLoggedIn={this.state.isLoggedIn} />)}}/>
+            {/* <Route path="/" render={() => {return(<Home isLoggedIn={this.state.isLoggedIn} />)}}/> */}
+            {/* <Route path="/" render={() => {return(<Home isLoggedIn={this.state.isLoggedIn} />)}}/> */}
+            <Route exact path="/lesson/:id" component= {Show} />
+            <Route exact path="/" component= {Home} />
           </Switch>
         </main>
       </div>
