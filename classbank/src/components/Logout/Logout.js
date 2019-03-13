@@ -6,13 +6,13 @@ class LogOut extends Component {
     return (
       <div>
         <h2>Log Out</h2>
-        {/* <form>
+        <form>
           <input
             value="Log Out"
             type="submit"
             onClick={this.props.handleLogOut}
           />
-        </form> */}
+        </form>
       </div>
     );
   }

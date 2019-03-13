@@ -7,17 +7,17 @@ class LogInForm extends Component {
       <div>
         <h2>Log In</h2>
 
-        {/* <form>
+        <form>
           <div>
-            <label htmlFor='email'>Email</label>
+            <label>Email</label>
             <input type='text' name='email' onChange={this.props.handleInput} />
           </div>
           <div>
-            <label htmlFor='password'>Password</label>
-            <input type='text' name='password' onChange={this.props.handleInput} />
+            <label>Password</label>
+            <input type='password' name='password' onChange={this.props.handleInput} />
           </div>
           <input value='Submit' type='submit' onClick={this.props.handleLogIn} />
-        </form> */}
+        </form>
       </div>
     )
   }
