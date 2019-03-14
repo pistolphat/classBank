@@ -5,14 +5,19 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
-        <input
-          type="text"
-          name="search"
-          onChange={this.props.handleSearch}
-          placeholder="Search your lesson"
-        />
-      </div>
+      // <div>
+      //   <input
+      //     type="text"
+      //     name="search"
+      //     onChange={this.props.handleSearch}
+      //     placeholder="Search your lesson"
+      //   />
+
+        <div className="input-group input-group-lg px-5 mt-3">
+          <input type="text" name='search' placeholder='Search your Lessons, Homeworks, Labs' onChange={this.props.handleSearch}
+            className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" />
+        </div>
+      // </div>
     );
   }
 }

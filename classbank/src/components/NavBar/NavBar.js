@@ -4,6 +4,8 @@ import "./NavBar.css";
 
 class NavBar extends Component {
   render() {
+    // console.log(this.props.isLoggedIn);
+
     let navBarItems = [];
     if (this.props.isLoggedIn) {
       navBarItems.push(<Link key={1} to="/logout/">Log Out</Link>);
@@ -12,14 +14,22 @@ class NavBar extends Component {
       navBarItems.push(<Link key={3} to="/login/">Log In</Link>);
     }
     return (
-      <div className='navbar'>
-        <div>
+      <div>
+        {/* <div>
         <Link to='/'>Classbank</Link>
         {navBarItems}
-        </div>
+        </div> */}
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <Link className="navbar-brand" to="/">Classbank</Link>
+          
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            {navBarItems}
+            </div>
+        </nav>
       </div>
     );
   } 
 }
+
 
 export default NavBar;

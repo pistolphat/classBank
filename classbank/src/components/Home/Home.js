@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// import Search from "../../components/Search/Search";
+import Search from "../../components/Search/Search";
 
 import "./Home.css";
 
@@ -77,7 +77,7 @@ const lessons = [
   }
 ];
 
-console.log(lessons[0].title);
+// console.log(lessons[0].title);
 class Home extends Component {
   constructor() {
     super();
@@ -123,8 +123,7 @@ class Home extends Component {
     // console.log(this.state.lessons);
     return (
       <div>
-        <h1>Classbank</h1>
-        {/* <Search handleSearch={this.handleSearch} /> */}
+        <Search handleSearch={this.handleSearch} />
         {/* <input type='text' name='search' value = {this.state.search} onChange={this.handleSearch} placeholder='Search your lesson'></input> */}
         {/* <input type='text' name={this.state.search} onSearchhandleSearch={this.handleSearch} placeholder='Search your lessons.'></input> */}
         {lessons}
