@@ -7,94 +7,33 @@ import "./Home.css";
 
 const url = "https://classbank.herokuapp.com/lesson/";
 
-const lessons = [
-  {
-    _id: "5c86fd39931644000430b7f5",
-    date: "Dec 21",
-    title: "JS and the DOM",
-    objective: "What is the DOM? Explore DOM manipulation.",
-    instructor: "Jimmy",
-    url: "https://git.generalassemb.ly/dc-wdi-fundamentals/js-dom"
-  },
-  {
-    _id: "5c86fd39931644000430b7f6",
-    date: "Jan 22",
-    title: "Express Authentication",
-    objective: "Local Authentication with Express and Passport.",
-    instructor: "Jimmy",
-    url: "https://git.generalassemb.ly/dc-wdi-node-express/express-passport"
-  },
-  {
-    _id: "5c86fd39931644000430b7f7",
-    date: "Jan 24",
-    title: "express-mongoose-mlab-deploy",
-    objective: "Deployment with MLABS and Heroku.",
-    instructor: "Jimmy and Erin",
-    url:
-      "https://git.generalassemb.ly/dc-wdi-node-express/express-mongoose-mlab-deploy"
-  },
-  {
-    _id: "5c86fd39931644000430b7f8",
-    date: "Jan 2",
-    title: "Parcel and Boostrap",
-    objective: "Learn how to use and build with Bootstrap framework.",
-    instructor: "Jimmy",
-    url: "https://git.generalassemb.ly/dc-wdi-node-express/mehn-lab"
-  },
-  {
-    _id: "5c86fd39931644000430b7f9",
-    date: "Jan 18",
-    title: "Lab: MEHN",
-    objective: "Pair programming utilizing MEHN stack.",
-    instructor: "Erin",
-    url: "https://git.generalassemb.ly/dc-wdi-node-express/mehn-lab"
-  },
-  {
-    _id: "5c86fd39931644000430b7fa",
-    date: "Jan 22",
-    title: "Express Authentication",
-    objective: "Local Authentication with Express and Passport.",
-    instructor: "Jimmy",
-    url: "https://git.generalassemb.ly/dc-wdi-node-express/express-passport"
-  },
-  {
-    _id: "5c86fd39931644000430b7fb",
-    date: "Feb 4",
-    title: "Intro to React & Components",
-    objective:
-      "Explain what is ReactJS and how does components fit into the modern model of web development.",
-    instructor: "Erin",
-    url: "https://git.generalassemb.ly/dc-wdi-react-redux/react-intro"
-  },
-  {
-    _id: "5c86fd39931644000430b7fc",
-    date: "Feb 28",
-    title: "Intro to SQL.",
-    objective:
-      "Learning about new database format, SQL. Using PostgreSQL and more.",
-    instructor: "Erin",
-    url: "https://git.generalassemb.ly/dc-wdi-python-django/sql-intro"
-  }
-];
 
-// console.log(lessons[0].title);
+function searchFor(search){
+  return function(x){
+    return x.title.toLowerCase().includes(search.toLowerCase()) || !search;
+  }
+}
+
 class Home extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      // lessons: [],
-      lessons,
+      lessons: [],
+      // lessons,
       search: ""
     };
     this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentDidMount() {
+    // console.log('Did mount');
     axios
       .get(url)
       .then(res => {
-        this.setState({ lessons: res.data });
+        let lessons = res.data
+        this.setState({ lessons: lessons})
+        console.log(lessons);
       })
       .catch(err => {
         console.log(err);
@@ -103,12 +42,13 @@ class Home extends Component {
   }
 
   handleSearch(e) {
-    //! Holding off for now
+    this.setState({ search: e.target.value})
   }
 
   render() {
-    let lessons = this.state.lessons.map(lesson => {
-      // (console.log(this.state.lessons))
+    // console.log(this.state.lessons)
+    let lessons = this.state.lessons.filter(searchFor(this.state.search)).map(lesson => {
+     
       return (
         <div className="lesson-card" key={lesson._id}>
           <Link to={`/lesson/${lesson._id}`}>
@@ -123,7 +63,7 @@ class Home extends Component {
     // console.log(this.state.lessons);
     return (
       <div>
-        <Search handleSearch={this.handleSearch} />
+        <Search search={this.state.search} handleSearch={this.handleSearch} />
         {lessons}
       </div>
     );

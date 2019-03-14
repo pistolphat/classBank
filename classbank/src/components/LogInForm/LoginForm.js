@@ -14,7 +14,7 @@ class LogInForm extends Component {
         <form>
           <div className="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="text" name="email" onChange={this.props.handleInput} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+            <input type="text" name="email" onChange={this.props.handleInput} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email address"/>
             <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div className="form-group">

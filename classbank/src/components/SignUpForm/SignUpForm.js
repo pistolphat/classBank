@@ -20,7 +20,7 @@ class SignUpForm extends Component {
         <h1>Sign Up</h1>
         <form>
         <div className="form-group">
-          <label for="exampleInputEmail1">Email address</label>
+          <label htmlfor="exampleInputEmail1">Email address</label>
           <input type="email" name='email' onChange={this.props.handleInput} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email address"/>
           <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>

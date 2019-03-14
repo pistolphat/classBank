@@ -24,7 +24,7 @@ componentDidMount() {
 }
   render() {
     // console.log(this.state.lesson);
-    return <div className='container-fluid'>
+    return <div className='container-fluid d-flex'>
     
         <div className="card mb-3" style={{maxWidth: "750px", marginTop: "10px"}}>
           {/* <div className="row no-gutters">
