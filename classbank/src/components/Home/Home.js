@@ -110,13 +110,19 @@ class Home extends Component {
     let lessons = this.state.lessons.map(lesson => {
       // (console.log(this.state.lessons))
       return (
-        <div className="lesson-container" key={lesson._id}>
+        <div className="lesson-card" key={lesson._id}>
           <Link to={`/lesson/${lesson._id}`}>
-            <h1>{lesson.title}</h1>
-          </Link>
-          <h3>Date: {lesson.date}</h3>
-          <h3>Instructor: {lesson.instructor}</h3>
+          <h3>{lesson.title}</h3></Link>
+          <p>Date: {lesson.date}</p>
+          <p>Instructor: {lesson.instructor}</p>
         </div>
+      //   <div className="card container" style={{width: '15rem'}} key={lesson._id}>
+      //     <div className="card-body row">
+      //       <Link to={`/lesson/${lesson._id}`}><h5 className="card-title">{lesson.title}</h5></Link>
+      //       <p className="card-text">Date: {lesson.date}</p>
+      //       <p className="card-text">Instructor: {lesson.instructor}</p>
+      //     </div>
+      // </div>
       );
     });
 
@@ -124,8 +130,6 @@ class Home extends Component {
     return (
       <div>
         <Search handleSearch={this.handleSearch} />
-        {/* <input type='text' name='search' value = {this.state.search} onChange={this.handleSearch} placeholder='Search your lesson'></input> */}
-        {/* <input type='text' name={this.state.search} onSearchhandleSearch={this.handleSearch} placeholder='Search your lessons.'></input> */}
         {lessons}
       </div>
     );
@@ -133,3 +137,6 @@ class Home extends Component {
 }
 
 export default Home;
+
+{/* <input type='text' name='search' value = {this.state.search} onChange={this.handleSearch} placeholder='Search your lesson'></input> */}
+{/* <input type='text' name={this.state.search} onSearchhandleSearch={this.handleSearch} placeholder='Search your lessons.'></input> */}
