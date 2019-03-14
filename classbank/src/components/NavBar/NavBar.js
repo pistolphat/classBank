@@ -19,7 +19,7 @@ class NavBar extends Component {
         <Link to='/'>Classbank</Link>
         {navBarItems}
         </div> */}
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg text-white bg-dark">
           <Link className="navbar-brand" to="/">Classbank</Link>
           
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">

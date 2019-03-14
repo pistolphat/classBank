@@ -9,27 +9,19 @@ class LogInForm extends Component {
   }
   render() {
     return (
-      <div>
-        <h2>Log In</h2>
-
+      <div className='container'>
+        <h1>Log In</h1>
         <form>
-          <div>
-            <label>Email</label>
-            <input type="text" name="email" onChange={this.props.handleInput} />
+          <div className="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="text" name="email" onChange={this.props.handleInput} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+            <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
-          <div>
-            <label>Password</label>
-            <input
-              type="password"
-              name="password"
-              onChange={this.props.handleInput}
-            />
+          <div className="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" name="password"onChange={this.props.handleInput} className="form-control" id="exampleInputPassword1" placeholder="Password"/>
           </div>
-          <input
-            value="Submit"
-            type="submit"
-            onClick={this.props.handleLogIn}
-          />
+          <input value="Submit" type="submit" onClick={this.props.handleLogIn}/>
         </form>
         {this.props.isLoggedIn ? this.redirect(): null}
       </div>
@@ -38,3 +30,24 @@ class LogInForm extends Component {
 }
 
 export default LogInForm;
+
+{/* <form>
+<div>
+<label>Email</label>
+<input type="text" name="email" onChange={this.props.handleInput} />
+</div>
+<div>
+<label>Password</label>
+<input
+type="password"
+name="password"
+onChange={this.props.handleInput}
+/>
+</div>
+<input
+value="Submit"
+type="submit"
+onClick={this.props.handleLogIn}
+/>
+</form>
+<form> */}
