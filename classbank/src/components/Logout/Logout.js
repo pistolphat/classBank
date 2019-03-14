@@ -8,11 +8,11 @@ class LogOut extends Component {
   render() {
     return (
 
-        <div>
+        <div className='logout'>
         <h2>Log Out</h2>
 
         <form>
-          <Link to='/login'><input className="btn btn-primary" value="Log Out" type="submit" onClick={this.props.handleLogOut} /></Link>
+          <Link to='/login'><input className="logoutbtn btn btn-primary" value="Log Out" type="submit" onClick={this.props.handleLogOut} /></Link>
         </form>
 
       </div>
