@@ -89,14 +89,12 @@ class App extends Component {
       <header>
         <Navbar isLoggedIn={this.state.isLoggedIn}/>
       </header>
-      
         <main>
           <Switch>
-            <Route path='/signup'render={(props) => {return (<SignUpForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />)}}/>
-            <Route path='/login'render={(props) => {return (<LogInForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} />)}}/>
-            <Route path='/logout'render={(props) => {return (<Logout isLoggedIn={this.state.isLoggedIn} handleLogOut={this.handleLogOut} />)}}/>
-            {/* <Route path="/" render={() => {return(<Home isLoggedIn={this.state.isLoggedIn} />)}}/> */}
-            {/* <Route path="/" render={() => {return(<Home isLoggedIn={this.state.isLoggedIn} />)}}/> */}
+            <Route exact path='/signup'render={(props) => {return (<SignUpForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />)}}/>
+            <Route exact path='/login'render={(props) => {return (<LogInForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} />)}}/>
+            <Route exact path='/logout'render={(props) => {return (<Logout isLoggedIn={this.state.isLoggedIn} handleLogOut={this.handleLogOut} />)}}/>
+
             <Route exact path="/lesson/:id" component= {Show} />
             <Route exact path="/" component= {Home} />
           </Switch>

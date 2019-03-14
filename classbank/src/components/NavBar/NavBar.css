@@ -1,3 +1,16 @@
 .navbar {
   display: flex;
+  justify-content: space-between;
+  /* align-items: flex-end; */
 }
+
+.nav-logo{
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+}
+
+/* .nav-link {
+  font-size: 20px;
+  float: right;
+} */
