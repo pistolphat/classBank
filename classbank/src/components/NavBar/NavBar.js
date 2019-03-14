@@ -22,10 +22,4 @@ class NavBar extends Component {
   } 
 }
 
-          {/* <Link className="navbar-brand" to="/">Classbank</Link> */}
-        {/* <div>
-        <Link to='/'>Classbank</Link>
-        {navBarItems}
-        </div> */}
-
 export default NavBar;

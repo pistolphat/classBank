@@ -10,7 +10,6 @@ class Search extends Component {
           <input type="text" name='search' placeholder='Search your Lessons, Homeworks, Labs' value={this.props.search} onChange={this.props.handleSearch}
             className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" />
         </div>
-      // </div>
     );
   }
 }

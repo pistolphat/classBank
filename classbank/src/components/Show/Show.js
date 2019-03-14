@@ -43,10 +43,4 @@ componentDidMount() {
   }
 }
 
-{/* <h1>{this.state.lesson.title}</h1>
-      <p><strong>Date: </strong>{this.state.lesson.date}</p>
-      <p><strong>Instructor: </strong>{this.state.lesson.instructor}</p>
-      <p><strong>Objective: </strong>{this.state.lesson.objective}</p>
-      <Link to=''>{this.state.lesson.url}</Link> */}
-
 export default Show;
