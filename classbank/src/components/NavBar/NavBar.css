@@ -1,6 +1,8 @@
 .navbar {
   display: flex;
+  font-family: 'Courier New', Courier, monospace;
   justify-content: space-between;
+  background-color: beige;
   /* align-items: flex-end; */
 }
 
@@ -10,7 +12,6 @@
   font-weight: bold;
 }
 
-/* .nav-link {
-  font-size: 20px;
-  float: right;
-} */
+.nav-link {
+  font-weight: bold;
+}

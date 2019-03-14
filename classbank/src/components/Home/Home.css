@@ -3,8 +3,9 @@
   border: 2px solid black;
   border-radius: 3px;
   margin: 15px 5px 5px 5px;
-  background-color: white;
+  padding: 5px 10px;
+  background-color: whitesmoke;
   width: auto;
   height: auto;
-  padding: 5px 10px; 
+ 
 }

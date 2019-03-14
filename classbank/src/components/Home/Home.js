@@ -52,15 +52,14 @@ class Home extends Component {
       return (
         <div className="lesson-card" key={lesson._id}>
           <Link to={`/lesson/${lesson._id}`}>
-          <h3>{lesson.title}</h3></Link>
+          <h4>{lesson.title}</h4></Link>
           <p><strong>Date:</strong> {lesson.date}</p>
           <p><strong>Instructor:</strong> {lesson.instructor}</p>
         </div>
  
       );
     });
-
-    // console.log(this.state.lessons);
+    
     return (
       <div>
         <Search search={this.state.search} handleSearch={this.handleSearch} />
