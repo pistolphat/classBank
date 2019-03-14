@@ -15,7 +15,7 @@ class SignUpForm extends Component {
     //   return <Redirect to={'/'}/>;
     // }
     return (
-      <div className='container'>
+      <div className='container rounded bg-light text-dark mt-5 py-3' style={{maxWidth: "400px"}}>
 
         <h1>Sign Up</h1>
         <form>
@@ -28,8 +28,9 @@ class SignUpForm extends Component {
           <label for="exampleInputPassword1">Password</label>
           <input type="password" name='password' onChange={this.props.handleInput}className="form-control" id="exampleInputPassword1" placeholder="Password"/>
         </div>
-          <input value='Submit' type='submit' onClick={this.props.handleSignUp} />
+          <input className="btn btn-primary" value='Submit' type='submit' onClick={this.props.handleSignUp} />
         </form>
+        
         {this.props.isLoggedIn ? this.redirect(): null}
       </div>
     )

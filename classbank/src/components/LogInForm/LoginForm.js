@@ -9,7 +9,7 @@ class LogInForm extends Component {
   }
   render() {
     return (
-      <div className='container'>
+      <div className='container bg-light text-dark mt-5 py-3 rounded' style={{maxWidth: "400px"}}>
         <h1>Log In</h1>
         <form>
           <div className="form-group">
@@ -21,9 +21,9 @@ class LogInForm extends Component {
             <label for="exampleInputPassword1">Password</label>
             <input type="password" name="password"onChange={this.props.handleInput} className="form-control" id="exampleInputPassword1" placeholder="Password"/>
           </div>
-          <input value="Submit" type="submit" onClick={this.props.handleLogIn}/>
+          <input className="btn btn-primary" value="Submit" type="submit" onClick={this.props.handleLogIn}/>
         </form>
-        {this.props.isLoggedIn ? this.redirect(): null}
+          {this.props.isLoggedIn ? this.redirect(): null}
       </div>
     );
   }

@@ -113,16 +113,10 @@ class Home extends Component {
         <div className="lesson-card" key={lesson._id}>
           <Link to={`/lesson/${lesson._id}`}>
           <h3>{lesson.title}</h3></Link>
-          <p>Date: {lesson.date}</p>
-          <p>Instructor: {lesson.instructor}</p>
+          <p><strong>Date:</strong> {lesson.date}</p>
+          <p><strong>Instructor:</strong> {lesson.instructor}</p>
         </div>
-      //   <div className="card container" style={{width: '15rem'}} key={lesson._id}>
-      //     <div className="card-body row">
-      //       <Link to={`/lesson/${lesson._id}`}><h5 className="card-title">{lesson.title}</h5></Link>
-      //       <p className="card-text">Date: {lesson.date}</p>
-      //       <p className="card-text">Instructor: {lesson.instructor}</p>
-      //     </div>
-      // </div>
+ 
       );
     });
 
@@ -140,3 +134,10 @@ export default Home;
 
 {/* <input type='text' name='search' value = {this.state.search} onChange={this.handleSearch} placeholder='Search your lesson'></input> */}
 {/* <input type='text' name={this.state.search} onSearchhandleSearch={this.handleSearch} placeholder='Search your lessons.'></input> */}
+//   <div className="card container" style={{width: '15rem'}} key={lesson._id}>
+//     <div className="card-body row">
+//       <Link to={`/lesson/${lesson._id}`}><h5 className="card-title">{lesson.title}</h5></Link>
+//       <p className="card-text">Date: {lesson.date}</p>
+//       <p className="card-text">Instructor: {lesson.instructor}</p>
+//     </div>
+// </div>

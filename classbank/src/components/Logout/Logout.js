@@ -6,7 +6,7 @@ import "./Logout.css";
 class LogOut extends Component {
 
   redirect(){
-    return < Redirect to='/signin'/>
+    return < Redirect to='/login'/>
   }
 
   render() {
@@ -15,6 +15,7 @@ class LogOut extends Component {
         <h2>Log Out</h2>
         <form>
           <input
+            className="btn btn-primary"
             value="Log Out"
             type="submit"
             onClick={this.props.handleLogOut}
