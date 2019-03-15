@@ -25,9 +25,9 @@ class Show extends Component {
   }
   render() {
     return (
-      <div className="container-fluid d-flex">
-        <div className="card mb-3" style={{ maxWidth: "750px", marginTop: "10px" }}>
-          <div className="card-body">
+      <div className="showcontainer d-block">
+        <div className="card" style={{ width: "500px", height: "300px" }}>
+          <div className="card-body showbox">
             <h3 className="card-title">{this.state.lesson.title}</h3>
             <p className="card-text">
               <strong>Date: </strong>
@@ -41,9 +41,9 @@ class Show extends Component {
               <strong>Objective: </strong>
               {this.state.lesson.objective}
             </p>
-            <Link to='#'>{this.state.lesson.url}</Link>
+            <Link to='#'>{this.state.lesson.url}</Link> <br />
+            <Link to='/'><button type="button" className="btn btn-secondary mt-2">Go back</button></Link>
           </div>
-          <Link to='/'><button type="button" class="btn btn-secondary">Go back</button></Link>
         </div>
       </div>
     );

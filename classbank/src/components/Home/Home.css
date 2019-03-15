@@ -2,10 +2,14 @@
   display: inline-block;
   border: 2px solid black;
   border-radius: 3px;
-  margin: 15px 5px 5px 5px;
-  padding: 5px 10px;
+  margin: 10px 5px 5px 5px;
+  padding: 7px;
   background-color: whitesmoke;
   width: auto;
   height: auto;
- 
+}
+
+.ptext {
+  font-size: 15px;
+  line-height: 5px;
 }

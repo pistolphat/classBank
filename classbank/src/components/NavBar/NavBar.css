@@ -3,11 +3,10 @@
   font-family: 'Courier New', Courier, monospace;
   justify-content: space-between;
   background-color: beige;
-  /* align-items: flex-end; */
 }
 
 .nav-logo{
-  font-size: 35px;
+  font-size: 50px;
   color: black;
   font-weight: bold;
 }

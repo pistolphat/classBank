@@ -7,7 +7,6 @@ import "./Home.css";
 
 const url = "https://classbank.herokuapp.com/lesson/";
 
-
 function searchFor(search){
   return function(x){
     return x.title.toLowerCase().includes(search.toLowerCase()) || !search;
@@ -52,16 +51,16 @@ class Home extends Component {
       return (
         <div className="lesson-card" key={lesson._id}>
           <Link to={`/lesson/${lesson._id}`}>
-          <h4>{lesson.title}</h4></Link>
-          <p><strong>Date:</strong> {lesson.date}</p>
-          <p><strong>Instructor:</strong> {lesson.instructor}</p>
+          <h6>{lesson.title}</h6></Link>
+          <p className='ptext'>Date: {lesson.date}</p>
+          {/* <p className='ptext'>Instructor: {lesson.instructor}</p> */}
         </div>
  
       );
     });
     
     return (
-      <div>
+      <div className='container-fluid'>
         <Search search={this.state.search} handleSearch={this.handleSearch} />
         {lessons}
       </div>

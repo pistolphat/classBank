@@ -11,7 +11,7 @@ class LogInForm extends Component {
     return (
       <div className='container bg-light text-dark mt-5 py-3 rounded' style={{maxWidth: "400px"}}>
 
-        <h1>Log In</h1>
+        <h1 className='login'>Log In</h1>
         <br />
         <form>
           <div className="form-group">
