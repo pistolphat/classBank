@@ -10,7 +10,7 @@ http://classbank.surge.sh/
 
 For API (back-end) repository, click [here](https://github.com/pistolphat/ClassBank-Backend).
 
-![](classbank/public/planning/Classbank%20SS.png)
+![](classbank/public/planning/ClassbankSS.png)
 
 
 ## Getting Started
