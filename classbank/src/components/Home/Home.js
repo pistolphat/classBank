@@ -50,9 +50,9 @@ class Home extends Component {
      
       return (
         <div className="lesson-card" key={lesson._id}>
-          <Link to={`/lesson/${lesson._id}`}>
-          <h6>{lesson.title}</h6></Link>
-          <p className='ptext'>Date: {lesson.date}</p>
+          <Link className='lesson-id' to={`/lesson/${lesson._id}`}>
+          <p className='lesson-title'>{lesson.title}</p></Link>
+          {/* <p className='lesson-title'>Date: {lesson.date}</p> */}
           {/* <p className='ptext'>Instructor: {lesson.instructor}</p> */}
         </div>
  
@@ -61,8 +61,8 @@ class Home extends Component {
     
     return (
       <div className='container-fluid'>
-        <Search search={this.state.search} handleSearch={this.handleSearch} />
-        {lessons}
+        <div className='search-bar'><Search search={this.state.search} handleSearch={this.handleSearch} /></div>
+        <div className='container-fluid'>{lessons}</div>
       </div>
     );
   }

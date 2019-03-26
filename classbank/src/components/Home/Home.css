@@ -1,15 +1,27 @@
 .lesson-card {
   display: inline-block;
-  border: 2px solid black;
-  border-radius: 3px;
-  margin: 10px 5px 5px 5px;
-  padding: 7px;
-  background-color: whitesmoke;
-  width: auto;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  border-radius: 5px;
+  margin: 3px 3px;
+  padding: 10px;
   height: auto;
+  background: rgba(0,0,0, .8);
+  line-height: 15px;
 }
 
-.ptext {
-  font-size: 15px;
-  line-height: 5px;
+/* .lesson-title{
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  line-height: 10px;
+  padding: 3px;
+} */
+
+a {
+  color: gold;
 }
+
+a:hover {
+  color: white;
+}
+

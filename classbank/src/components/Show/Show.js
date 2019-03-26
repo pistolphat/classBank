@@ -6,6 +6,7 @@ import "./Show.css";
 const url = " https://classbank.herokuapp.com/lesson/";
 
 class Show extends Component {
+  
   constructor() {
     super();
     this.state = {
@@ -26,7 +27,7 @@ class Show extends Component {
   render() {
     return (
       <div className="showcontainer d-block">
-        <div className="card" style={{ width: "500px", height: "300px" }}>
+        <div className="card" style={{ width: "500px", height: "350px" }}>
           <div className="card-body showbox">
             <h3 className="card-title">{this.state.lesson.title}</h3>
             <p className="card-text">
@@ -41,8 +42,9 @@ class Show extends Component {
               <strong>Objective: </strong>
               {this.state.lesson.objective}
             </p>
-            <Link to='#'>{this.state.lesson.url}</Link> <br />
-            <Link to='/'><button type="button" className="btn btn-secondary mt-2">Go back</button></Link>
+            <a className='link-to'target='_blank' href={this.state.lesson.url} rel="noopener noreferrer">{this.state.lesson.url}</a>
+            {/* <Link className='link-to' target='_blank' to='#'>{this.state.lesson.url}</Link> <br /> */}
+            <Link to='/'><button type="button" className="btn btn-primary mt-3">Go back</button></Link>
           </div>
         </div>
       </div>

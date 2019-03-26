@@ -1,16 +1,25 @@
 .navbar {
   display: flex;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Raleway', sans-serif;
   justify-content: space-between;
-  background-color: beige;
+  background-color: transparent;
+  padding: 0px 10px;
 }
 
 .nav-logo{
   font-size: 50px;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
 .nav-link {
   font-weight: bold;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: gold;
 }
