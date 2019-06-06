@@ -4,9 +4,9 @@ import "./App.css";
 import { Route, Switch } from "react-router-dom";
 
 import Navbar from "../../components/NavBar/NavBar";
-import SignUpForm from "../../components/SignUpForm/SignUpForm";
-import LogInForm from "../../components/LogInForm/LoginForm";
-import Logout from "../../components/Logout/Logout";
+// import SignUpForm from "../../components/SignUpForm/SignUpForm";
+// import LogInForm from "../../components/LogInForm/LoginForm";
+// import Logout from "../../components/Logout/Logout";
 import Home from "../../components/Home/Home"
 import Show from '../../components/Show/Show'
 
@@ -91,9 +91,9 @@ class App extends Component {
       </header>
         <main>
           <Switch>
-            <Route exact path='/signup'render={(props) => {return (<SignUpForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />)}}/>
+            {/* <Route exact path='/signup'render={(props) => {return (<SignUpForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />)}}/>
             <Route exact path='/login'render={(props) => {return (<LogInForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} />)}}/>
-            <Route exact path='/logout'render={(props) => {return (<Logout isLoggedIn={this.state.isLoggedIn} handleLogOut={this.handleLogOut} />)}}/>
+            <Route exact path='/logout'render={(props) => {return (<Logout isLoggedIn={this.state.isLoggedIn} handleLogOut={this.handleLogOut} />)}}/> */}
 
             <Route exact path="/lesson/:id" component= {Show} />
             <Route exact path="/" component= {Home} />
